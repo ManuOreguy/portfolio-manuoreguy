@@ -1,0 +1,13 @@
+@import "@/scss/styleguide.scss";
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  background-color: $white;
+  color: $black;
+  padding: 0 16px;
+}
+
+.scrollTop{
+  cursor: pointer;
+}
