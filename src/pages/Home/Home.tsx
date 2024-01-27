@@ -1,8 +1,6 @@
-import styles from './Home.module.scss';
-
 function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <p>Home Page</p>
     </div>
   );

@@ -1,7 +1,5 @@
-import styles from './Header.module.scss';
-
 function Header() {
-  return <header className={styles.container}>TODO Header</header>;
+  return <header className="h-0">TODO Header</header>;
 }
 
 export default Header;
