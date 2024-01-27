@@ -25,6 +25,11 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "index.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "postcss.config.js", 
+    "index.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
