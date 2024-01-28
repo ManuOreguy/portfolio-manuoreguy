@@ -7,9 +7,9 @@ function Home() {
   return (
     <>
       <AboutMe />
-      {/* <Experience />
+      {/* <Experience /> */}
       <TechStack />
-      <Contact /> */}
+      <Contact />
     </>
   );
 }
