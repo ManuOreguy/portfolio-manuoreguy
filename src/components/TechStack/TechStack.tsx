@@ -13,8 +13,8 @@ import tailwindIcon from '@/assets/img/techIcons/tailwind.svg';
 
 function TechStack() {
   return (
-    <div className="flex flex-col items-center mb-10">
-      <p className="text-lg font-bold text-violet-500 pb-4">Tech Stack</p>
+    <div className="flex flex-col items-center pb-10">
+      <h2 className="text-lg font-bold text-violet-500 pb-5">Tech Stack</h2>
       <div className="flex flex-wrap items-center space-x-4">
         <img className="h-10 w-10" src={htmlIcon} alt="HTML" />
         <img className="h-10 w-10" src={cssIcon} alt="CSS" />
