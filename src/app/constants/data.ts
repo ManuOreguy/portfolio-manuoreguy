@@ -1,5 +1,11 @@
 import { Experience, NavItem, Project, SocialLink } from "../lib/types";
 
+export type ContactFormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 export const NAV_ITEMS: NavItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Experiencia", href: "#experience" },

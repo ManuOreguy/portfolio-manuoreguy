@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Header from "./components/layout/Header";
+import Header from "./_components/layout/Header";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,12 +27,8 @@ export const metadata: Metadata = {
     apple: "/images/test.svg",
     other: {
       rel: "apple-touch-icon-precomposed",
-      url: "/images/favicon.svg",
+      url: "/images/test.svg",
     },
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
   },
 };
 
@@ -45,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-gray-900 text-gray-100 min-h-screen`}
       >
+        <Toaster />
         <Header />
         <main className="pt-16">{children}</main>
       </body>

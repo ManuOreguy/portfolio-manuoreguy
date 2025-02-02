@@ -1,4 +1,4 @@
-import { Experience } from "@/app/lib/types";
+import { Experience } from "@/lib/types";
 import Image from "next/image";
 
 interface ExperienceCardProps {

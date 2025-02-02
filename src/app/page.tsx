@@ -1,9 +1,8 @@
-import { EXPERIENCES, PROJECTS } from "./constants/data";
-import Hero from "./components/home/Hero";
-import ExperienceCard from "./components/experience/ExperienceCard";
-import ProjectCard from "./components/projects/ProjectCard";
-import ContactForm from "./components/contact/ContactForm";
-import Image from "next/image";
+import { EXPERIENCES, PROJECTS } from "@/app/constants/data";
+import Hero from "@/app/_components/home/Hero";
+import ExperienceCard from "@/app/_components/experience/ExperienceCard";
+import ProjectCard from "@/app/_components/projects/ProjectCard";
+import ContactForm from "@/app/_components/contact/ContactForm";
 
 export default function Home() {
   return (

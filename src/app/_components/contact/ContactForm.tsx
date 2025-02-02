@@ -1,18 +1,19 @@
 "use client";
 
+import { ContactFormData } from "@/app/constants/data";
+import { useToast } from "@/app/hooks/useToast";
+import { sendEmail } from "@/app/services/emailService";
 import { useState } from "react";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
+  const { promiseToast } = useToast("bottom-right");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -27,17 +28,16 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus("idle");
 
     try {
-      // Aquí implementarías la lógica para enviar el formulario
-      // Por ejemplo, usando un servicio como EmailJS o una API
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulación
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error: unknown) {
-      console.error("Error al enviar el formulario:", error);
-      setSubmitStatus("error");
+      await promiseToast(sendEmail(formData), {
+        loadingMessage: "Enviando mensaje...",
+        successCallback: () => {
+          setFormData({ name: "", email: "", message: "" });
+        },
+      });
+    } catch (error) {
+      console.error("Error en el formulario:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -109,18 +109,6 @@ const ContactForm = () => {
       >
         {isSubmitting ? "Enviando..." : "Enviar mensaje"}
       </button>
-
-      {submitStatus === "success" && (
-        <p className="text-green-400 text-sm text-center">
-          ¡Mensaje enviado con éxito!
-        </p>
-      )}
-
-      {submitStatus === "error" && (
-        <p className="text-red-400 text-sm text-center">
-          Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.
-        </p>
-      )}
     </form>
   );
 };
