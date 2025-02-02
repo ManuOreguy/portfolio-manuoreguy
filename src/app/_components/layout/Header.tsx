@@ -12,17 +12,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-xl font-bold text-purple-500 hover:text-purple-400 transition-colors"
-            aria-label="Ir al inicio"
-          >
-            MO
-          </Link>
-
+        <div className="flex items-center justify-center">
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center justify-center space-x-12">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
@@ -73,7 +65,7 @@ const Header = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block text-gray-300 hover:text-purple-400 transition-colors"
+                className="block text-center text-gray-300 hover:text-purple-400 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
                 aria-label={`Ir a ${item.label}`}
               >

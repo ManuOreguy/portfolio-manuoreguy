@@ -92,3 +92,14 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://manuoreguy.dev",
   },
 ];
+
+export type Experience = {
+  id: number;
+  company: string;
+  position: string;
+  period: string;
+  description: string;
+  technologies: string[];
+  logos: string[];
+  bgColor?: string;
+};
