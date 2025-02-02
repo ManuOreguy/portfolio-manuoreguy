@@ -22,8 +22,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-gray-800/30">
+      {/* <section id="projects" className="py-20 px-4 bg-gray-800/30">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">
             Mis <span className="text-purple-500">Proyectos</span>
@@ -34,14 +33,20 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Contacta<span className="text-purple-500">me</span>
-          </h2>
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              <span className="text-purple-500">Hablemos</span>
+            </h2>
+            <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
+              Estoy siempre interesado en nuevos desafíos y oportunidades.
+              Enviame un mensaje y charlemos sobre cómo puedo ayudarte.
+            </p>
+          </div>
           <ContactForm />
         </div>
       </section>
