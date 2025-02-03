@@ -1,8 +1,6 @@
 "use client";
 
-import { SOCIAL_LINKS } from "@/app/constants/data";
 import Image from "next/image";
-import Link from "next/link";
 import WhatsAppQR from "../ui/WhatsAppQR";
 
 const Hero = () => {

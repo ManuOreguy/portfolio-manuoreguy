@@ -1,4 +1,4 @@
-import { Experience, NavItem, Project, SocialLink } from "../lib/types";
+import { NavItem, Project, SocialLink } from "../lib/types";
 
 export type ContactFormData = {
   name: string;
@@ -29,9 +29,28 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const EXPERIENCES: Experience[] = [
   {
     id: 1,
+    company: "Amalgama",
+    position: "Frontend Developer",
+    period: "Oct 2023 - Actualidad",
+    description:
+      "Desarrollo de aplicaciones móviles y web enfocadas en salud y bienestar (Welltech). Implementación de interfaces de usuario con React Native y React. Trabajo con metodologías ágiles en equipo multidisciplinario. Integración de APIs, implementación de features y optimización de rendimiento.",
+    technologies: [
+      "React Native",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "APIs REST",
+      "Git",
+      "Agile",
+    ],
+    logos: ["/images/amalgama.png"],
+    bgColor: "bg-white",
+  },
+  {
+    id: 2,
     company: "Cedeira Software Factory",
     position: "Frontend Developer",
-    period: "Feb 2023 - Actualidad",
+    period: "Feb 2023 - Sep 2023",
     description:
       "Desarrollo de aplicaciones web y móviles con React y React Native. Participación en proyecto de facturación electrónica con integración de APIs, gestión de estado con Redux Toolkit, desarrollo de Custom Hooks, y creación de dashboard empresarial. Implementación de aplicación móvil para conectar cuidadores de mascotas con usuarios. Realización de pruebas y optimización de experiencia de usuario.",
     technologies: [
@@ -47,9 +66,9 @@ export const EXPERIENCES: Experience[] = [
     bgColor: "bg-gray-100",
   },
   {
-    id: 2,
+    id: 3,
     company: "Gulf (Deltapatagonia S.A.)",
-    position: "Analista Logístico y Product Owner",
+    position: "Analista Logístico y PO",
     period: "Mar 2021 - Feb 2023",
     description:
       "Product Owner de plataforma de ventas y LogicTracker en Argentina y Uruguay. Gestión de planeamiento logístico para red de estaciones de servicio. Desarrollo y mejora de base de datos en SAP B1, creación de dashboards estratégicos en Power BI, análisis de P&L y gestión de supply chain para lubricantes.",
@@ -58,10 +77,10 @@ export const EXPERIENCES: Experience[] = [
     bgColor: "bg-orange-50",
   },
   {
-    id: 3,
+    id: 4,
     company: "Monsun SRL",
     position: "Desarrollador Qlik SSR",
-    period: "Oct 2016 - Sep 2020",
+    period: "May 2019 - Sep 2020",
     description:
       "Desarrollo de soluciones de Business Intelligence utilizando QlikSense y Qlikview. Implementación de procesos ETL y diseño de dashboards para empresas como Pfizer, Jazmin Chebar y LoJack. Gestión de tareas en QMC y documentación técnica. Trabajo con bases de datos SQL y SAP B1.",
     technologies: ["QlikSense", "Qlikview", "SQL", "SAP B1", "ETL"],
@@ -69,7 +88,7 @@ export const EXPERIENCES: Experience[] = [
     bgColor: "bg-blue-50",
   },
   {
-    id: 4,
+    id: 5,
     company: "Epic Mountain Express",
     position: "Reservation Agent",
     period: "Dic 2018 - Abr 2019",
@@ -78,6 +97,17 @@ export const EXPERIENCES: Experience[] = [
     technologies: ["Customer Service", "Reservation Systems", "English"],
     logos: ["/images/epic.png"],
     bgColor: "bg-gray-100",
+  },
+  {
+    id: 6,
+    company: "Monsun SRL",
+    position: "Desarrollador Qlik Jr",
+    period: "Oct 2016 - Nov 2018",
+    description:
+      "Inicio en el desarrollo de Business Intelligence con QlikSense y Qlikview. Desarrollo de dashboards y reportes para clientes corporativos. Aprendizaje y aplicación de procesos ETL, SQL y mejores prácticas de visualización de datos.",
+    technologies: ["QlikSense", "Qlikview", "SQL", "ETL"],
+    logos: ["/images/monsun.jpg"],
+    bgColor: "bg-blue-50",
   },
 ];
 

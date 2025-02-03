@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import Header from "./_components/layout/Header";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/app/_components/layout/Footer";
 
+// Opción 1: Inter (muy popular en diseños modernos)
 const inter = Inter({ subsets: ["latin"] });
+
+// Opción 2: Plus Jakarta Sans (elegante y profesional)
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+});
+
+// Opción 3: Outfit (moderna y limpia)
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+});
 
 export const metadata: Metadata = {
   title: "Juan Manuel Oreguy - Frontend Developer",
@@ -41,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-900 text-gray-100 min-h-screen`}
+        className={`${outfit.variable} font-sans bg-gray-900 text-gray-100 min-h-screen`}
       >
         <Toaster />
         <Header />

@@ -1,24 +1,19 @@
-import { EXPERIENCES, PROJECTS } from "@/app/constants/data";
 import Hero from "@/app/_components/home/Hero";
-import ExperienceCard from "@/app/_components/experience/ExperienceCard";
-import ProjectCard from "@/app/_components/projects/ProjectCard";
 import ContactForm from "@/app/_components/contact/ContactForm";
+import ExperienceTimeline from "@/app/_components/experience/ExperienceTimeline";
+import TechStack from "@/app/_components/home/TechStack";
 
 export default function Home() {
   return (
     <>
       <Hero />
-
+      <TechStack />
       <section id="experience" className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-16">
             Experiencia <span className="text-purple-500">Profesional</span>
           </h2>
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {EXPERIENCES.map((experience) => (
-              <ExperienceCard key={experience.id} experience={experience} />
-            ))}
-          </div>
+          <ExperienceTimeline />
         </div>
       </section>
 
