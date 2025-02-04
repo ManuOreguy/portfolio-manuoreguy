@@ -113,11 +113,8 @@ const TECHNOLOGIES = [
 
 const TechStack = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-8 px-4">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl font-bold text-center mb-16">
-          Stack <span className="text-purple-500">Tecnológico</span>
-        </h2>
         <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-6 md:gap-8">
           {TECHNOLOGIES.map((tech) => (
             <div key={tech.name} className="flex flex-col items-center group">

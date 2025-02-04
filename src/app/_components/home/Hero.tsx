@@ -34,9 +34,10 @@ const Hero = () => {
           </div>
 
           <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
-            Dedicado a crear interfaces cautivadoras e implementar soluciones
-            robustas. Mi objetivo es combinar diseño y funcionalidad de manera
-            perfecta para una experiencia de usuario excepcional.
+            ¡Hola! 👋 Soy desarrollador frontend y me gusta crear experiencias
+            web que además de verse bien, sean fáciles de usar. Me divierte
+            probar nuevas tecnologías y buscar soluciones creativas a los
+            desafíos que van surgiendo.
           </p>
 
           {/* WhatsApp QR */}

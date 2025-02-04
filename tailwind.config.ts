@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        outfit: ["var(--font-outfit)"],
+        "plus-jakarta": ["var(--font-plus-jakarta)"],
+        inter: ["var(--font-inter)"],
+      },
     },
   },
   plugins: [],

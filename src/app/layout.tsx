@@ -6,7 +6,10 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/app/_components/layout/Footer";
 
 // Opción 1: Inter (muy popular en diseños modernos)
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 // Opción 2: Plus Jakarta Sans (elegante y profesional)
 const plusJakarta = Plus_Jakarta_Sans({
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
     apple: "/images/test.svg",
     other: {
       rel: "apple-touch-icon-precomposed",
-      url: "/images/test.svg",
+      url: "/images/favicon.svg",
     },
   },
 };
@@ -54,12 +57,18 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body
-        className={`${outfit.variable} font-sans bg-gray-900 text-gray-100 min-h-screen`}
+        className={`${outfit.variable} ${plusJakarta.variable} ${inter.variable} font-plus-jakarta bg-gray-900 text-gray-100 min-h-screen relative`}
       >
-        <Toaster />
-        <Header />
-        <main className="pt-16">{children}</main>
-        <Footer />
+        {/* Gradient Background */}
+        <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/[0.03] via-gray-900 to-gray-900 pointer-events-none" />
+
+        {/* Content */}
+        <div className="relative">
+          <Toaster />
+          <Header />
+          <main className="pt-16">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
