@@ -39,11 +39,11 @@ export const metadata: Metadata = {
     "APIs REST",
   ],
   icons: {
-    icon: "/images/test.svg",
-    shortcut: "/images/test.svg",
-    apple: "/images/test.svg",
+    icon: "/images/favicon.svg",
+    shortcut: "/images/favicon.svg",
+    apple: "/images/favicon.svg",
     other: {
-      rel: "apple-touch-icon-precomposed",
+      rel: "apple-touch-icon",
       url: "/images/favicon.svg",
     },
   },
