@@ -119,7 +119,7 @@ const TechStack = () => {
   const [showAll, setShowAll] = useState(false);
   const displayedTechnologies = showAll
     ? TECHNOLOGIES
-    : TECHNOLOGIES.slice(0, 9);
+    : TECHNOLOGIES.slice(0, 12);
 
   return (
     <section className="py-8 px-4">
@@ -143,7 +143,7 @@ const TechStack = () => {
           ))}
         </div>
 
-        {TECHNOLOGIES.length > 9 && (
+        {TECHNOLOGIES.length > 12 && (
           <button
             onClick={() => setShowAll(!showAll)}
             className="flex items-center gap-2 mx-auto mt-8 text-sm sm:text-base text-purple-400 hover:text-purple-300 transition-colors group"

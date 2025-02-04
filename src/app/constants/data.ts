@@ -112,7 +112,7 @@ export const EXPERIENCES: Experience[] = [
       "Desarrollo de dashboards estratégicos en Power BI",
       "Gestión de supply chain para red de estaciones de servicio",
     ],
-    technologies: ["SAP B1", "SQL", "Power BI", "Excel", "Metodologías Ágiles"],
+    technologies: ["SAP B1", "SQL", "Power BI", "Excel"],
     logos: ["/images/gulf.png", "/images/delta.jpg"],
     bgColor: "bg-orange-50",
   },
