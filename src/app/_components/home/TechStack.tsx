@@ -1,3 +1,5 @@
+"use client";
+
 import {
   SiReact,
   SiTypescript,
@@ -17,6 +19,8 @@ import {
   SiVercel,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
+import { HiChevronDown } from "react-icons/hi2";
+import { useState } from "react";
 
 const TECHNOLOGIES = [
   // Frontend Core
@@ -112,27 +116,46 @@ const TECHNOLOGIES = [
 ];
 
 const TechStack = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedTechnologies = showAll
+    ? TECHNOLOGIES
+    : TECHNOLOGIES.slice(0, 9);
+
   return (
     <section className="py-8 px-4">
       <div className="container mx-auto max-w-5xl">
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-6 md:gap-8">
-          {TECHNOLOGIES.map((tech) => (
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
+          {displayedTechnologies.map((tech) => (
             <div key={tech.name} className="flex flex-col items-center group">
-              <div className="relative w-12 h-12 md:w-14 md:h-14 mb-2">
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mb-2">
                 <div className="absolute -inset-2 bg-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 blur-xl transition-opacity" />
-                <div className="relative bg-gray-800/50 rounded-full p-3 backdrop-blur-sm border border-gray-700/50 flex items-center justify-center">
+                <div className="relative bg-gray-800/50 rounded-full p-2.5 sm:p-3 backdrop-blur-sm border border-gray-700/50 flex items-center justify-center">
                   <tech.Icon
                     className="w-full h-full transition-colors"
                     style={{ color: tech.color }}
                   />
                 </div>
               </div>
-              <span className="text-xs text-gray-400 group-hover:text-purple-400 transition-colors">
+              <span className="text-[11px] sm:text-xs text-center text-gray-400 group-hover:text-purple-400 transition-colors">
                 {tech.name}
               </span>
             </div>
           ))}
         </div>
+
+        {TECHNOLOGIES.length > 9 && (
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="flex items-center gap-2 mx-auto mt-8 text-sm sm:text-base text-purple-400 hover:text-purple-300 transition-colors group"
+          >
+            <span>{showAll ? "Ver menos" : "Ver más tecnologías"}</span>
+            <HiChevronDown
+              className={`w-5 h-5 transition-transform duration-300 ${
+                showAll ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+        )}
       </div>
     </section>
   );
