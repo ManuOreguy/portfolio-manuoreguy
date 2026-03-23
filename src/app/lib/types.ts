@@ -4,6 +4,8 @@ export type Experience = {
   position: string;
   period: string;
   description: string;
+  shortDescription: string;
+  achievements: string[];
   technologies: string[];
   logos: string[];
   bgColor?: string;
@@ -13,10 +15,11 @@ export type Project = {
   id: number;
   title: string;
   description: string;
-  image: string;
+  image?: string;
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
+  context?: string;
 };
 
 export type SocialLink = {

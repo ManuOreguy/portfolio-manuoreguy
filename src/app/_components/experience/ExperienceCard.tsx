@@ -1,6 +1,6 @@
 "use client";
 
-import { Experience } from "@/app/constants/data";
+import { Experience } from "@/app/lib/types";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -50,6 +50,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
               <p className="text-purple-400/90 font-medium truncate text-sm sm:text-base">
                 {experience.company}
               </p>
+              <p className="text-gray-500 text-xs mt-0.5">{experience.period}</p>
             </div>
             <svg
               className={`w-5 h-5 flex-shrink-0 text-gray-400 group-hover:text-purple-400 transform transition-all duration-200 ${

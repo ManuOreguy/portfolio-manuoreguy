@@ -1,23 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Plus_Jakarta_Sans, Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import Header from "./_components/layout/Header";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/app/_components/layout/Footer";
 
-// Opción 1: Inter (muy popular en diseños modernos)
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-// Opción 2: Plus Jakarta Sans (elegante y profesional)
+// Plus Jakarta Sans (elegante y profesional)
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta",
 });
 
-// Opción 3: Outfit (moderna y limpia)
+// Outfit (moderna y limpia)
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -57,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body
-        className={`${outfit.variable} ${plusJakarta.variable} ${inter.variable} font-plus-jakarta bg-gray-900 text-gray-100 min-h-screen relative`}
+        className={`${outfit.variable} ${plusJakarta.variable} font-plus-jakarta bg-gray-900 text-gray-100 min-h-screen relative`}
       >
         {/* Gradient Background */}
         <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/[0.03] via-gray-900 to-gray-900 pointer-events-none" />
