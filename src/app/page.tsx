@@ -2,9 +2,14 @@ import Hero from "@/app/_components/home/Hero";
 import ContactForm from "@/app/_components/contact/ContactForm";
 import ExperienceTimeline from "@/app/_components/experience/ExperienceTimeline";
 import TechStack from "@/app/_components/home/TechStack";
+import ProjectCard from "@/app/_components/projects/ProjectCard";
+import { PROJECTS } from "@/app/constants/data";
 import { HiOutlineBriefcase } from "react-icons/hi";
-import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
-import { HiOutlineCodeBracket } from "react-icons/hi2";
+import {
+  HiOutlineChatBubbleBottomCenterText,
+  HiOutlineCodeBracket,
+  HiOutlineRectangleStack,
+} from "react-icons/hi2";
 
 const SectionTitle = ({
   icon: Icon,
@@ -66,18 +71,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section id="projects" className="py-20 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Mis <span className="text-purple-500">Proyectos</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section id="projects" className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <SectionTitle
+            icon={HiOutlineRectangleStack}
+            title="Mis"
+            highlight="Proyectos"
+            description="Selección de proyectos profesionales y personales que reflejan mi experiencia técnica y forma de resolver problemas."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {PROJECTS.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section id="contact" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -88,8 +96,9 @@ export default function Home() {
               highlight="Hablemos"
             />
             <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
-              Estoy siempre interesado en nuevos desafíos y oportunidades.
-              Enviame un mensaje y charlemos sobre cómo puedo ayudarte.
+              Busco oportunidades full-time o freelance — remoto o LATAM.
+              Si tenés un proyecto donde React, React Native o Next.js pueden
+              hacer la diferencia, contame.
             </p>
           </div>
           <ContactForm />

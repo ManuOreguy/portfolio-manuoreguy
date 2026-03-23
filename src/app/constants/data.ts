@@ -1,4 +1,4 @@
-import { NavItem, Project, SocialLink } from "../lib/types";
+import { Experience, NavItem, Project, SocialLink } from "../lib/types";
 
 export type ContactFormData = {
   name: string;
@@ -26,19 +26,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: "linkedin",
   },
 ];
-
-export type Experience = {
-  id: number;
-  company: string;
-  position: string;
-  period: string;
-  description: string;
-  shortDescription: string;
-  achievements: string[];
-  technologies: string[];
-  logos: string[];
-  bgColor?: string;
-};
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -178,11 +165,38 @@ export const EXPERIENCES: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: 1,
+    title: "Sistema de Facturación Electrónica",
+    description:
+      "Plataforma web para gestión de facturación electrónica empresarial con integración de APIs fiscales, dashboard de métricas en tiempo real y gestión de estado global.",
+    context:
+      "Proyecto desarrollado en Cedeira Software Factory para un cliente corporativo. El desafío era modernizar un proceso manual de facturación y centralizar la información en una sola plataforma.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "Next.js",
+      "TailwindCSS",
+      "APIs REST",
+    ],
+  },
+  {
+    id: 2,
+    title: "App de Cuidadores de Mascotas",
+    description:
+      "Aplicación móvil que conecta dueños de mascotas con cuidadores de confianza. Incluye perfiles, sistema de reseñas, búsqueda por ubicación y reservas en tiempo real.",
+    context:
+      "Desarrollada en React Native para iOS y Android. El reto principal fue implementar una experiencia nativa fluida con búsqueda geolocalizada y sistema de mensajería entre usuarios.",
+    technologies: ["React Native", "TypeScript", "APIs REST", "Geolocalización"],
+  },
+  {
+    id: 3,
     title: "Portfolio Personal",
-    description: "Portfolio profesional desarrollado con Next.js y TailwindCSS",
-    image: "/images/portfolio.png",
+    description:
+      "Portfolio profesional construido con Next.js 15, React 19 y TypeScript. Diseño dark con acento púrpura, animaciones CSS, formulario de contacto con Gmail SMTP y despliegue en Vercel.",
+    context:
+      "Proyecto propio para consolidar identidad profesional online. Foco en performance, accesibilidad y diseño responsive.",
     technologies: ["Next.js", "React", "TypeScript", "TailwindCSS"],
-    githubUrl: "https://github.com/manuoreguy/portfolio",
-    liveUrl: "https://manuoreguy.dev",
+    githubUrl: "https://github.com/ManuOreguy/portfolio-manuoreguy",
+    liveUrl: "https://manuoreguy.vercel.app",
   },
 ];
